@@ -32,6 +32,14 @@
     "husky": "^9.1.7",
     "typescript": "^5.9.3"
   },
+   "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
+  },
   "dependencies": {
     "dotenv": "^17.2.4"
   }

@@ -1,2 +1,2 @@
 yarn test
-yarn lint
+npx lint-staged
