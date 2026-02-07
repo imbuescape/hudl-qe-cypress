@@ -38,7 +38,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.ts": "eslint --fix"
   },
   "dependencies": {
     "dotenv": "^17.2.4"
