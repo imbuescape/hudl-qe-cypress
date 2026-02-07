@@ -20,12 +20,35 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Cypress run
-        run: yarn cy:run
+      - name: Run Linting
+        run: yarn lint  
+
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          command: yarn cy:run
+        env:
+
+          CYPRESS_VALID_USER: ${{ secrets.VALID_USER }}
+          CYPRESS_VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
+          CYPRESS_allure: true
+
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        if: always()
         continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
 
       - name: Generate Allure Report
-        run: yarn allure:report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 5
 
       - name: Deploy Allure Report to GitHub Pages
         if: always()
