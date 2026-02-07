@@ -92,8 +92,6 @@ Cypress.Commands.add('loginToHudlAlt', (emailAddress, password) => {
 
 
 
-//=======================================================================================================================
-
 Cypress.Commands.add('verifyUserProfile', (expectedName, expectedEmailAddress) => {
     cy.log(`Verifying profile: ${expectedName} `);
 

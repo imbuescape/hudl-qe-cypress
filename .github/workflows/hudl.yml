@@ -1,5 +1,11 @@
 name: hudl-qe-project
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
@@ -30,8 +36,8 @@ jobs:
           command: yarn cy:run
         env:
 
-          CYPRESS_VALID_USER: ${{ secrets.VALID_USER }}
-          CYPRESS_VALID_PASSWORD: ${{ secrets.VALID_PASSWORD }}
+          CYPRESS_VALID_USER: ${{ secrets.CYPRESS_VALID_USER }}
+          CYPRESS_VALID_PASSWORD: ${{ secrets.CYPRESS_VALID_PASSWORD }}
           CYPRESS_allure: true
 
       - name: Get Allure history

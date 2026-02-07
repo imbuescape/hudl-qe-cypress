@@ -4,6 +4,8 @@ import { CredentialResolver } from "../../support/utils/CredentialResolver"
 
 const LOGIN_ERROR_MSG = 'Incorrect username or password.';
 const INVALID_EMAIL_MSG = 'Enter a valid email.';
+const USER_NAME = 'John O';
+const EMAIL_ADDRESS = 'onijon@gmail.com';
 
  
     Given("I am on the Hudl login page", () => {
@@ -13,13 +15,13 @@ const INVALID_EMAIL_MSG = 'Enter a valid email.';
 
   
     When("I login with valid credentials", () => {
-        cy.loginToHudlAlt(Cypress.env('VALID_USER'), Cypress.env('VALID_PASSWORD'));
+        cy.loginToHudlAlt(Cypress.env('VALID_USER'), Cypress.env('VALID_PASSWORD')); 
     
 
     });
 
     Then("I should be redirected to the dashboard", () => {
-        cy.verifyUserProfile('John O', 'onijon@gmail.com');
+        cy.verifyUserProfile(USER_NAME, EMAIL_ADDRESS);
 
     });
 
