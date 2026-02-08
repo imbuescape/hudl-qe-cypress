@@ -10,23 +10,23 @@ class LoginPage {
 
 
     clickLoginButton() {
-        return cy.get(LOGIN_ELEMENTS.selectLogin).click();
+        return cy.get(LOGIN_ELEMENTS.SELECT_LOGIN).click();
     }
 
     clickHudlLogin() {
-        return cy.get(LOGIN_ELEMENTS.selectHudl).click();
+        return cy.get(LOGIN_ELEMENTS.SELECT_HUDL).click();
 
     }
     clickContinueButton() {
-        return cy.get(LOGIN_ELEMENTS.continueButton).click();
+        return cy.get(LOGIN_ELEMENTS.BTN_CONTINUE).click();
     }
 
     submitUserName(emailAddress: string) {
-        return cy.get(LOGIN_ELEMENTS.emailInput).type(emailAddress);
+        return cy.get(LOGIN_ELEMENTS.EMAIL_INPUT).type(emailAddress);
     }
 
     submitPassword(password: string) {
-        return cy.get(LOGIN_ELEMENTS.passwordInput).type(password, { log: false });
+        return cy.get(LOGIN_ELEMENTS.PASSWORD_INPUT).type(password, { log: false });
     }
     getPasswordError() {
         return cy.get(LOGIN_ELEMENTS.PASSWORD_ERROR)

@@ -46,8 +46,8 @@ Cypress.Commands.add('submitMalformedEmail', (emailAddress) => {
     loginPage.clickHudlLogin();
 
     const selectors = {
-        emailInput: LOGIN_ELEMENTS.emailInput,
-        continueBtn: LOGIN_ELEMENTS.continueButtonSecondary, // Using standard button for the origin
+        emailInput: LOGIN_ELEMENTS.EMAIL_INPUT,
+        continueBtn: LOGIN_ELEMENTS.BTN_SECONDARY_CONTINUE, // Using standard button for the origin
 
     };
 
@@ -71,10 +71,10 @@ Cypress.Commands.add('loginToHudlAlt', (emailAddress, password) => {
 
     // Explicitly passing only strings to avoid path/serialization errors
     const selectors = {
-        emailInput: LOGIN_ELEMENTS.emailInput,
-        continueBtn: LOGIN_ELEMENTS.continueButtonSecondary, // Using standard button for the origin
-        passInput: LOGIN_ELEMENTS.passwordInput,
-        submitBtn: LOGIN_ELEMENTS.continueButton
+        emailInput: LOGIN_ELEMENTS.EMAIL_INPUT,
+        continueBtn: LOGIN_ELEMENTS.BTN_SECONDARY_CONTINUE, // Using standard button for the origin
+        passInput: LOGIN_ELEMENTS.PASSWORD_INPUT,
+        submitBtn: LOGIN_ELEMENTS.BTN_CONTINUE
     };
 
     cy.origin('https://identity.hudl.com/u/login/', { args: { emailAddress, password, selectors } },
