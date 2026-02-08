@@ -1,7 +1,8 @@
 /// <reference types="cypress" />
 import { loginPage } from "../pages/LoginPage/LoginPage";
-import { landingPage } from "../pages/LandingPage/LandingPage"
-import { LOGIN_ELEMENTS } from "../pages/LoginPage/elements"
+import { landingPage } from "../pages/LandingPage/LandingPage";
+import { LOGIN_ELEMENTS } from "../pages/LoginPage/elements";
+import './index.d.ts'
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
