@@ -80,7 +80,7 @@ Cypress.Commands.add('loginToHudlAlt', (emailAddress, password) => {
     cy.origin('https://identity.hudl.com/u/login/', { args: { emailAddress, password, selectors } },
 
         ({ emailAddress, password, selectors }) => {
-            cy.get(selectors.emailInput).type(emailAddress);
+            cy.get(selectors.emailInput).type(emailAddress, { log: false });
             cy.get(selectors.continueBtn).click();
             cy.get(selectors.passInput).type(password, { log: false });
             cy.get(selectors.submitBtn).click();

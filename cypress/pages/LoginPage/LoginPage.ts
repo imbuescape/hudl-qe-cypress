@@ -22,7 +22,7 @@ class LoginPage {
     }
 
     submitUserName(emailAddress: string) {
-        return cy.get(LOGIN_ELEMENTS.EMAIL_INPUT).type(emailAddress);
+        return cy.get(LOGIN_ELEMENTS.EMAIL_INPUT).type(emailAddress, { log: false });
     }
 
     submitPassword(password: string) {
