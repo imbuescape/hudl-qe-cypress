@@ -1,6 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4905","Failed login with invalid credentials (example #2)","","Thu May 21 02:05:18 UTC 2026","failed","Thu May 21 02:05:23 UTC 2026","","User Authentication","",""
-"","8717","Successful login with valid credentials","","Thu May 21 02:04:59 UTC 2026","failed","Thu May 21 02:05:08 UTC 2026","","User Authentication","",""
-"","4905","Failed login with invalid credentials (example #1)","","Thu May 21 02:05:13 UTC 2026","failed","Thu May 21 02:05:18 UTC 2026","","User Authentication","",""
-"","4916","Failed login with invalid credentials (example #3)","","Thu May 21 02:05:23 UTC 2026","failed","Thu May 21 02:05:28 UTC 2026","","User Authentication","",""
-"","5058","Failed login with malformed email","","Thu May 21 02:05:08 UTC 2026","failed","Thu May 21 02:05:13 UTC 2026","","User Authentication","",""
